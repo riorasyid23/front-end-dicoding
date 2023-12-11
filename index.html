@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="overlay-bg" id="overlay"></div>
+    <header>
+        <h1>Bookshelf App</h1>
+    </header>
+    <div class="config-wrapper">
+        <div class="search-wrapper">
+            <input class="search-form-input" type="text" name="search-input" id="search-input-form" placeholder="Cari Judul buku...">
+            <button class="search-icon-btn">
+            </button>
+        </div>
+        <button class="add-btn" id="addBtn"><span class="add-icon"></span><p>Tambah Buku</p></button>
+    </div>
+    <main class="main-book-container">
+        <div class="mobile-tab">
+            <button class="tab-unread" id="tabUnread" autofocus>
+                Belum Selesai dibaca
+            </button>
+            <button class="tab-readed" id="tabReaded">
+                Selesai dibaca
+            </button>
+        </div>
+        <div class="unread-shelf tab-unread-active" id="unreadShelf">
+            <h1>Belum Selesai dibaca</h1>
+            <div class="unread-book-container">
+                <h1 id="notFound">Buku tidak ditemukan</h1>
+            </div>
+        </div>
+        <div class="readed-shelf" id="readedShelf">
+            <h1>Selesai dibaca</h1>
+            <div class="readed-book-container">
+                <h1 id="notFound">Buku tidak ditemukan</h1>
+            </div>
+        </div>
+        <div class="modal-form" id="modalForm">
+            <h1>Masukkan Buku Baru</h1>
+            <form class="book-form" id="bookForm">
+                <label for="bookTitle">Judul Buku</label>
+                <input type="text" id="bookTitle" name="bookTitle" required>
+        
+                <label for="author">Penulis</label>
+                <input type="text" id="author" name="author" required>
+        
+                <label for="releaseYear">Tahun</label>
+                <input type="number" id="releaseYear" name="releaseYear" required>
+                
+                <div class="read-check">
+                    <label for="alreadyRead">Selesai dibaca</label>
+                    <input type="checkbox" id="alreadyRead" name="alreadyRead">
+                </div>
+        
+                <div class="action-buttons">
+                  <button type="submit" id="addButton">Tambah</button>
+                  <button type="button" id="cancelButton">Batal</button>
+                </div>
+              </form>
+        </div>
+        <div class="edit-modal-form" id="editModalForm">
+            <h1>Edit Data Buku</h1>
+            <form class="edit-book-form" id="editBookForm">
+                <label for="editBookTitle">Judul Buku</label>
+                <input type="text" id="editBookTitle" name="editBookTitle" required>
+        
+                <label for="editAuthor">Penulis</label>
+                <input type="text" id="editAuthor" name="editAuthor" required>
+        
+                <label for="editReleaseYear">Tahun</label>
+                <input type="number" id="editReleaseYear" name="editReleaseYear" required>
+                
+                <div class="edit-read-check">
+                    <label for="editAlreadyRead">Selesai dibaca</label>
+                    <input type="checkbox" id="editAlreadyRead" name="editAlreadyRead">
+                </div>
+        
+                <div class="edit-action-buttons">
+                  <button type="submit" id="editButton">Simpan</button>
+                  <button type="button" id="cancelEditButton">Batal</button>
+                </div>
+              </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
